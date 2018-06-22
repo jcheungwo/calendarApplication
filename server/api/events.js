@@ -3,9 +3,7 @@ const { Event } = require('../db/models')
 module.exports = router
 
 router.get('/', (req, res, next) => {
-  Event.findAll({
-    // attributes: ['id', 'email']
-  })
+  Event.findAll()
     .then(users => res.json(users))
     .catch((err) => console.log(err))
 })
