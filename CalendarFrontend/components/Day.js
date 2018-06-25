@@ -50,7 +50,7 @@ class Day extends Component {
               info.map((event) => {
                 return (
                   <span key={event.id}>
-                    {event.title} - {event.startTime}
+                    {event.title} ({event.startTime} - {event.endTime})
                   </span>
                 )
               })

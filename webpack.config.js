@@ -4,7 +4,7 @@ module.exports = {
   mode: isDev ? 'development' : 'production',
   entry: [
     '@babel/polyfill',
-    './client/index.js'
+    './CalendarFrontend/index.js'
   ],
   output: {
     path: __dirname,
