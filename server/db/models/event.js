@@ -6,11 +6,35 @@ const Event = db.define('events', {
     type: Sequelize.STRING,
     allowNull: false
   },
-  timeStart: {
+  startYear: {
+    type: Sequelize.INTEGER,
+    allowNull: false
+  },
+  startMonth: {
+    type: Sequelize.INTEGER,
+    allowNull: false
+  },
+  startDay: {
+    type: Sequelize.INTEGER,
+    allowNull: false
+  },
+  startTime: {
     type: Sequelize.STRING,
     allowNull: false
   },
-  timeEnd: {
+  endYear: {
+    type: Sequelize.INTEGER,
+    allowNull: false
+  },
+  endMonth: {
+    type: Sequelize.INTEGER,
+    allowNull: false
+  },
+  endDay: {
+    type: Sequelize.INTEGER,
+    allowNull: false
+  },
+  endTime: {
     type: Sequelize.STRING,
     allowNull: false
   },

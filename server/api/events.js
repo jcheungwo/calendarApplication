@@ -16,7 +16,7 @@ router.get('/:id', (req, res, next) => {
 
 router.post('/', (req, res, next) => {
   Event.create(req.body)
-  .then(newEvent => res.json(`${newEvent.title} has been created`))
+  .then(newEvent => res.json(newEvent))
   .catch((err) => console.log(err))
 })
 
@@ -26,8 +26,8 @@ router.delete('/:id', (req, res, next) => {
   .catch((err) => console.log(err))
 })
 
-router.put('/:id', (req, res, next) => {
-  Event.update(req.body, {where: {id: req.params.id}})
-  .then(() => res.json(`Event with id number ${req.params.id} has been updated`))
-  .catch((err) => console.log(err))
+router.put('/:id', async (req, res, next) => {
+  await Event.update(req.body, {where: {id: req.params.id}})
+  Event.findOne({where: {id: req.params.id}})
+  .then((updatedEvent) => res.json(updatedEvent))
 })

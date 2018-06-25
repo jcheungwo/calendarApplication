@@ -1,10 +1,11 @@
 import React from 'react'
+import Month from './components/Month'
 
 
 const App = () => {
   return (
     <div>
-      Testing
+      <Month />
     </div>
   )
 }
