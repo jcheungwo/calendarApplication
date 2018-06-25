@@ -4,6 +4,12 @@ import { removeEvent, addEvent, updateEvent} from '../store'
 import AddForm from './AddForm'
 import UpdateForm from './UpdateForm'
 
+const numberEnding = {
+  '1': 'st',
+  '2': 'nd',
+  '3': 'rd'
+}
+
 class Details extends Component {
   constructor() {
     super()
@@ -85,7 +91,7 @@ class Details extends Component {
           {form}
           <div className='details'>
             <div className='events-header'>
-              <h3 className='events'>Events</h3>
+              <h3 className='events'>Events for the {this.props.day}{numberEnding[this.props.day % 10] ? numberEnding[this.props.day % 10] : 'th'}</h3>
               <button className='add' type='button' onClick={() => this.addForm()}>Add</button>
             </div>
             {
