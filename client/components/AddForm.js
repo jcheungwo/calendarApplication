@@ -68,10 +68,10 @@ class AddForm extends Component {
             Name: <input type="text" name="name" placeholder="required" onChange={(event) => this.nameChange(event)} required/>
           </label>
           <label>
-            Start: <input type="text" name="startTime" placeholder="required" onChange={(event) => this.startChange(event)} required/>
+            Start: <input type="text" name="startTime" placeholder="hh:mm required" onChange={(event) => this.startChange(event)} required/>
           </label>
           <label>
-            End: <input type="text" name="endTime" placeholder="required" onChange={(event) => this.endChange(event)} required/>
+            End: <input type="text" name="endTime" placeholder="hh:mm required" onChange={(event) => this.endChange(event)} required/>
           </label>
           <label>
             Location: <input type="text" name="location" placeholder="optional" onChange={(event) => this.locationChange(event)}/>
