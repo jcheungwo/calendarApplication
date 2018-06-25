@@ -6,6 +6,7 @@
 - cd calendarApplication
 - npm install
 - createdb calendarapp
+- npm run seed      //optional, populates db with events
 - npm run start-dev
 - ** IN BROWSER **
 - navigate to localhost:8080
